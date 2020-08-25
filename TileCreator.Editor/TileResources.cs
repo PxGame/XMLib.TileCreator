@@ -8,7 +8,7 @@
 using System.Reflection;
 using UnityEngine;
 
-namespace XMLib
+namespace XMLib.TileCreator
 {
     /// <summary>
     /// 地图资源设置

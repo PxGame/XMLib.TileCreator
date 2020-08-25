@@ -12,7 +12,7 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-namespace XMLib
+namespace XMLib.TileCreator
 {
     /// <summary>
     /// TileResourceEditor

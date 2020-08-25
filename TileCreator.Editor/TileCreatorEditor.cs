@@ -13,7 +13,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace XMLib
+namespace XMLib.TileCreator
 {
     /// <summary>
     /// 地图编辑器
