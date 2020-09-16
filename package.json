@@ -1,0 +1,14 @@
+{
+    "name": "com.peterxiang.xmlib.tilecreator",
+    "version": "1.0.0",
+    "displayName": "XMLib Tile Creator",
+    "description": "XMLib 瓷砖编辑器",
+    "unity": "2019.1",
+    "dependencies": {},
+    "keywords": [],
+    "author": {
+        "name": "Peter Xiang",
+        "email": "565067150@qq.com",
+        "url": "https://github.com/PxGame"
+    }
+}
