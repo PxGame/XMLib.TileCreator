@@ -10,5 +10,12 @@
         "name": "Peter Xiang",
         "email": "565067150@qq.com",
         "url": "https://github.com/PxGame"
-    }
+    },
+    "samples": [
+        {
+            "displayName": "Tile Creator Demo",
+            "description": "测试用场景、配置文件及美术资源",
+            "path": "Samples~/Tile Creator Demo"
+        }
+    ]
 }
