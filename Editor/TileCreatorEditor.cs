@@ -97,6 +97,7 @@ namespace XMLib.TileCreator
 
         private const string DataFlag = "XMLib_TileCreatorEditor";
 
+        private Plane _drawPlane = new Plane(Vector3.back, Vector3.zero);
         private Camera _camera;
         private Vector2Int _endPos;
         private List<Vector2Int> _invalidPoses = new List<Vector2Int>();
@@ -1067,14 +1068,12 @@ namespace XMLib.TileCreator
 
         private Vector2Int ScreenToGridPos(Camera cam, Vector2 mousePosition)
         {
-            float mult = EditorGUIUtility.pixelsPerPoint;
-            Vector3 mousepos = mousePosition;
-            mousepos.x *= mult;
-            mousepos.y = cam.pixelHeight - mousepos.y * mult;
-            mousepos.z = -cam.transform.position.z;
-
-            mousepos = cam.ScreenToWorldPoint(mousepos);
-            return ToGirdPos(mousepos);
+            mousePosition.y = cam.pixelHeight - mousePosition.y;
+            mousePosition = EditorGUIUtility.PixelsToPoints(mousePosition);
+            var ray = cam.ScreenPointToRay(mousePosition);
+            _drawPlane.Raycast(ray, out float enter);
+            Vector3 worldPos = ray.origin + ray.direction * enter;
+            return ToGirdPos(worldPos);
         }
 
         private Vector2Int ToGirdPos(Vector2 worldPos)
